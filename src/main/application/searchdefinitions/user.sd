@@ -24,7 +24,7 @@ search user {
         }
 
         field skills type weightedset<string> {
-            indexing: summary
+            indexing: index | summary
             match:word
         }
 
