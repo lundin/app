@@ -9,19 +9,29 @@ search user {
             attribute: fast-search
         }
 
-        field has_read_items type array<string> {
+
+        field user_name type string {
+            indexing: summary
+        }
+
+
+        field location type position {
             indexing: summary | attribute
         }
 
-        field user_item_cf type tensor(user_item_cf[10]) {
-            indexing: summary | attribute
-            attribute: tensor(user_item_cf[10])
+        field presentation type string {
+            indexing: summary
         }
 
-        field has_user_item_cf type byte {
-            indexing: summary | attribute
-            attribute: fast-search
+        field skills type weightedset<string> {
+            indexing: summary
+            match:word
         }
+
+         field belongs_to type array<string> {
+            indexing: summary
+        }
+
 
     }
 

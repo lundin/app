@@ -3,12 +3,6 @@
 <services version='1.0' xmlns:deploy="vespa" xmlns:preprocess="properties">
 
   <container id='default' version='1.0'>
-
-    <search>
-      <chain id='user' inherits='vespa'>
-        <searcher bundle='blog-recommendation' id='com.yahoo.example.UserProfileSearcher' />
-      </chain>
-    </search>
     <document-api/>
     <nodes>
       <node hostalias='node1'/>
@@ -18,8 +12,9 @@
   <content id='content' version='1.0'>
     <redundancy>1</redundancy>
     <documents>
-      <document mode='index' type='blog_post'/>
+      <document mode='index' type='job'/>
       <document mode='index' type='user'/>
+      <document mode='index' type='activity'/>
     </documents>
     <nodes>
       <node hostalias='node1' distribution-key='0'/>
