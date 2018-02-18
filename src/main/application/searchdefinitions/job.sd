@@ -29,7 +29,15 @@ search job {
     }
 
     fieldset default {
-        fields: title,description,skills
+        fields: title,description
+    }
+
+    rank-profile jobs inherits default {
+
+        first-phase {
+            expression:nativeRank(title, description)
+        }
+
     }
 
 
