@@ -34,16 +34,16 @@ search activity {
         }
 
 
-        field title project_members type array<string> {
+        field project_members type array<string> {
             indexing: summary
         }
 
-         field title project_tools type array<string> {
+         field project_tools type array<string> {
             indexing: summary | index
         }
 
 
-         field title associated_company type array<string> {
+         field associated_company type array<string> {
             indexing: summary | index
         }
 
