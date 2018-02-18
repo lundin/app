@@ -21,7 +21,7 @@ search job {
         }
 
          field skills type weightedset<string> {
-            indexing: summary
+            indexing: summary | index
             match:word
         }
 
