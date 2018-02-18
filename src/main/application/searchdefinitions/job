@@ -1,0 +1,37 @@
+# Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+
+search job {
+
+    document job {
+
+        field status type string {
+            indexing: summary
+        }
+
+        field posted_by type string {
+            indexing: summary
+        }
+
+        field title type string {
+            indexing: summary | index
+        }
+
+         field description type string {
+            indexing: summary | index
+        }
+
+         field skills type weightedset<string> {
+            indexing: summary
+            match:word
+        }
+
+
+    }
+
+    fieldset default {
+        fields: title,description,skills
+    }
+
+
+
+}

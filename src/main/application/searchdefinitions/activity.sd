@@ -1,0 +1,58 @@
+# Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+
+search activity {
+
+    document activity {
+
+        field title type string {
+            indexing: summary | index
+        }
+
+        field abstract type string {
+            indexing: summary | index
+        }
+
+        field description type string {
+            indexing: summary | index
+        }
+
+        field tags type array<string> {
+            indexing: summary | index
+        }
+
+        field status type string {
+            indexing: summary
+        }
+
+        field outcome type string {
+            indexing: summary
+        }
+
+
+        field project_leader type string {
+            indexing: summary
+        }
+
+
+        field title project_members array<string> {
+            indexing: summary
+        }
+
+         field title project_tools array<string> {
+            indexing: summary | index
+        }
+
+
+         field title associated_company array<string> {
+            indexing: summary | index
+        }
+
+
+    }
+
+    fieldset default {
+        fields: title,tags,abstract,body
+    }
+ 
+
+}
