@@ -51,7 +51,7 @@ search activity {
     }
 
     fieldset default {
-        fields: title,tags,abstract,body
+        fields: title,tags,abstract,description
     }
  
 
